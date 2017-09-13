@@ -11,6 +11,7 @@
 #include "primitives/block.h"
 #include "protocol.h"
 #include "uint256.h"
+#include "amount.h"
 
 #include <vector>
 
@@ -23,7 +24,7 @@ struct CDNSSeedData {
 
 /**
  * CChainParams defines various tweakable parameters of a given instance of the
- * PIVX system. There are three: the main network on which people trade goods
+ * ColossusCoinXT system. There are three: the main network on which people trade goods
  * and services, the public test network which gets reset from time to time and
  * a regression test mode which is intended for private networks only. It has
  * minimal difficulty to ensure that blocks can be found instantly.
@@ -95,6 +96,13 @@ public:
     int64_t StartMasternodePayments() const { return nStartMasternodePayments; }
     CBaseChainParams::Network NetworkID() const { return networkID; }
 
+    int64_t GetMasternodeRewardPercent() const { return nMasternodeRewardPercent; }
+    int64_t GetBudgetPercent() const { return nBudgetPercent; }
+    int64_t GetMinStakeAge() const { return nMinStakeAge; }
+    unsigned int GetModifierInterval() const { return nModifierInterval; }
+    unsigned int GetModifierIntervalRatio() const { return nModifierIntervalRatio; }
+    CAmount GetRequiredMasternodeCollateral() const { return nRequiredMasternodeCollateral; }
+
 protected:
     CChainParams() {}
 
@@ -136,6 +144,13 @@ protected:
     std::string strSporkKey;
     std::string strObfuscationPoolDummyAddress;
     int64_t nStartMasternodePayments;
+
+    int64_t nMasternodeRewardPercent;
+    int64_t nBudgetPercent;
+    int64_t nMinStakeAge;
+    unsigned int nModifierInterval;
+    unsigned int nModifierIntervalRatio;
+    CAmount nRequiredMasternodeCollateral;
 };
 
 /** 
