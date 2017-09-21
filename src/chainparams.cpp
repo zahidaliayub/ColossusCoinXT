@@ -127,7 +127,7 @@ public:
          *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
          *   vMerkleTree: e0028e
          */
-        const char* pszTimestamp = "Bitcoin Block 486360 : 0000000000000000001b9dee6e2838ddd0e70fdd8008378177b6225ceb9ace02";
+        const char* pszTimestamp = "placeholder until launch";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -143,8 +143,8 @@ public:
         genesis.nNonce = 2402015;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x3d0045ccb01fcfcdb0ee96d844e37d26d3313c9b0a164a4abe63af3aae41dc26"));
-        assert(genesis.hashMerkleRoot == uint256("0x2f675c4942ca26b4ee92224f1fb4c1849ad4e9fe5c3bef2f38dd5201e1507d9c"));
+        assert(hashGenesisBlock == uint256("0x0"));
+        assert(genesis.hashMerkleRoot == uint256("0x0"));
 
         vSeeds.push_back(CDNSSeedData("presstab", "colxseed.presstab.pw"));
 
@@ -215,7 +215,7 @@ public:
         genesis.nNonce = 2452017;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0432f032c4715c988b0c2fb15c245581d775df73980dfb72c14819e7c5f74a7e"));
+        assert(hashGenesisBlock == uint256("0x0"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -281,7 +281,7 @@ public:
 
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 51476;
-        assert(hashGenesisBlock == uint256("0xb2d88972a045676a7852391ef6352b37d50c1875e2e3dcfabbb4ab7906ae669c"));
+        assert(hashGenesisBlock == uint256("0x0"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.

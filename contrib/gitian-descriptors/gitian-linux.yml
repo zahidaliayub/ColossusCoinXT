@@ -1,5 +1,5 @@
 ---
-name: "colx-linux-3.0"
+name: "ColossusCoinXT-linux-1.0.0"
 enable_cache: true
 suites:
 - "trusty"
@@ -29,8 +29,8 @@ packages:
 - "python"
 reference_datetime: "2015-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/colx-project/colx.git"
-  "dir": "colx"
+- "url": "https://github.com/ColossusCoinXT/ColossusCoinXT.git"
+  "dir": "ColossusCoinXT"
 files: []
 script: |
 
@@ -114,7 +114,7 @@ script: |
   chmod +x ${WRAP_DIR}/${prog}
   done
 
-  cd colx
+  cd ColossusCoinXT
   BASEPREFIX=`pwd`/depends
   # Build dependencies for each host
   for i in $HOSTS; do
