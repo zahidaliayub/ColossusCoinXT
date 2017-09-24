@@ -1625,7 +1625,6 @@ int64_t GetBlockValue(int nHeight, CAmount nFees, bool fBudgetBlock)
     int64_t nBudgetMultiplier = COIN;
     if (!fBudgetBlock)
         nBudgetMultiplier = COIN - (Params().GetBudgetPercent() * CENT);
-    LogPrintf("%s budget multiplier %s\n", __func__, FormatMoney(nBudgetMultiplier));
 
     CAmount nSubsidy = 1000 * nBudgetMultiplier;
     if (nHeight == 1)
