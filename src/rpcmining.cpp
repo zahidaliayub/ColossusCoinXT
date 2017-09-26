@@ -621,6 +621,9 @@ Value submitblock(const Array& params, bool fHelp)
         if (!sc.found)
             return "inconclusive";
         state = sc.state;
+
+        for (CNode* node : vNodes)
+            node->PushInventory(CInv(MSG_BLOCK, block.GetHash()));
     }
     return BIP22ValidationResult(state);
 }
