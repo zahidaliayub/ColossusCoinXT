@@ -107,9 +107,9 @@ public:
         nRejectBlockOutdatedMajority = 950;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 120; // ColossusCoinXT: 2 minute
-        nTargetSpacing = 1 * 120;  // ColossusCoinXT: 2 minute
-        nLastPOWBlock = 10080;
+        nTargetTimespan = 120; // ColossusCoinXT: 2 minute
+        nTargetSpacing = 120;  // ColossusCoinXT: 2 minute
+        nLastPOWBlock = 20160;
         nMaturity = 90;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 0;
